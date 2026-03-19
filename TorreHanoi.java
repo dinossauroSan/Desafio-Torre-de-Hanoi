@@ -36,6 +36,24 @@ public class TorreHanoi {
         }
     }
 
+    public void imprimirB(int indice) {
+        if (indice == b.length) {
+            return;
+        } else {
+            System.out.print("[" + b[indice] + "] ");
+            imprimirB(indice + 1);
+        }
+    }
+
+    public void imprimirC(int indice) {
+        if (indice == c.length) {
+            return;
+        } else {
+            System.out.print("[" + c[indice] + "] ");
+            imprimirC(indice + 1);
+        }
+    }
+
     public void resolverHanoi(int n, int[] a, int[] b, int[] c){
         
     }
