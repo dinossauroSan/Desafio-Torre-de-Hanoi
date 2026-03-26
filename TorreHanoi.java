@@ -9,8 +9,10 @@ public class TorreHanoi {
         this.a = new int[numeroDePinos];
         this.b = new int[numeroDePinos];
         this.c = new int[numeroDePinos];
+        this.numeroDePinos = numeroDePinos;
         if (numeroDePinos > 0) {
             preencherTorreA((numeroDePinos - 1), numeroDePinos);
+            inverterVetor(this.a);
         }
 
     }
@@ -25,6 +27,19 @@ public class TorreHanoi {
             return preencherTorreA(indice - 1, numeroDePinos);
         }
         
+    }
+
+    public void inverterVetor(int[] vetor) {
+        int inicio = 0;
+        int fim = vetor.length - 1;
+        while (inicio < fim) {
+            int temp = vetor[inicio];
+            vetor[inicio] = vetor[fim];
+            vetor[fim] = temp;
+
+            inicio++;
+            fim--;
+        }
     }
 
     public void imprimirA(int indice) {
@@ -54,7 +69,16 @@ public class TorreHanoi {
         }
     }
 
-    public void resolverHanoi(int n, int[] a, int[] b, int[] c){
+    public void moverDisco(int[] origem, int[] destino) {
         
+    }
+
+    public void resolverHanoi(int n, int[] a, int[] b, int[] c){
+        if (this.a[0] == 0 && this.b[0] == 0) {
+
+
+        } else if (n == 1) {
+
+        }
     }
 }
